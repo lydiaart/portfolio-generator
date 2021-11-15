@@ -110,7 +110,7 @@ module.exports = templateData => {
     }">GitHub</a>
       </nav>
     </div>
-  </header>
+  </header>  
   <main class="container my-5">
   ${generateAbout(about)}
   ${generateProjects(projects)}
