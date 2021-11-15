@@ -72,6 +72,17 @@ const generateProjects = projectsArr => {
   `;
 };
 
+const generateProjects = projectsArr => {
+  return `
+<section class="my-3" id="portfolio">
+  <h2 class="text-dark bg-primary p-2 display-inline-block">Work</h2>
+  <div class="flex-row justify-space-between">
+    <!--Leaving this empty as we'll dynamically insert project HTML here -->
+  </div>
+  </section>
+  `;
+};
+
 module.exports = templateData => {
   // destructure projects and about data from templateData based on their property key names
   const { projects, about, ...header } = templateData;
@@ -102,6 +113,7 @@ module.exports = templateData => {
   </header>
   <main class="container my-5">
   ${generateAbout(about)}
+  ${generateProjects(projects)}
 </main>
   <footer class="container text-center py-3">
     <h3 class="text-dark">&copy; ${new Date().getFullYear()} by ${header.name}</h3>
